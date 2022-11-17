@@ -15,9 +15,9 @@ const Auth = () => {
     <div>
       <section className="auth-section">
         {isSignup && <AboutAuth />}
-        <div className="aut-container-2">
+        <div className="auth-container-2">
           {!isSignup && (
-            <img src={icon} alt="stack overflow" classname="login-logo" />
+            <img src={icon} alt="stack overflow" className="login-logo" />
           )}
           <form>
               {

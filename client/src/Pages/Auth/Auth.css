@@ -27,19 +27,19 @@
 .auth-container-2 form{
     width: 100%;
     padding: 20px;
-    background-color: white;
+    background-color: #fff;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    box-shadow: 0 10px 25px rgb(0 0 0 / 5%), 
-                0 20px 48px rgb(0 0 0 / 5%),
-                0 1px 4px rgb(0 0 0 / 10%);
+    box-shadow: 0 10px 25px rgb(0 0 0 / 5%),
+     0 20px 48px rgb(0 0 0 / 5%),
+     0 1px 4px rgb(0 0 0 / 10%);
 }
 
 .auth-container-2 form label input{
     padding: 10px;
-    width: calc(100%-30px);
+    width: calc( 100% - 30px );
     border: solid 1px #0000003e;
     font-size: 13px;
 }
@@ -56,8 +56,8 @@
 }
 
 .auth-container-2 form label:nth-child(4) input{
-    width: 15%;
-    margin: 13px 0px;
+    width: 5%;
+    margin: 13px 15px;
 }
 
 .auth-btn{
@@ -83,5 +83,4 @@
     border: none;
     font-size: 13px;
     cursor: pointer;
-    
 }
