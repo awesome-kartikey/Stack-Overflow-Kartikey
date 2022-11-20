@@ -7,7 +7,7 @@ import Avatar from '../../components/Avatar/Avatar'
 import './Navbar.css'
 
 const Navbar = () => {
-  var User = null;
+  var User = JSON.parse(localStorage.getItem('Profile'));
   return (
     <nav className='main-nav'>
         <div className="navbar">

@@ -8,7 +8,7 @@ const leftSidebar = () => {
   return (
     <div className="left-side-bar">
       <nav className="side-nav">
-        <NavLink to="/" className="side-nav-links" activeClass="active" >
+        <NavLink to="/" className={({ isActive }) => "side-nav-links" + (isActive ? " active" : "")} >
           <p>Home</p>
         </NavLink>
           <div className="side-nav-div">
@@ -20,10 +20,10 @@ const leftSidebar = () => {
             <p style={{ paddingLeft: "10px" }}>Questions</p>
           </NavLink>
 
-          <NavLink to='/Tags' className="side-nav-links" activeClass="active" style={{ paddingLeft: "40px" }} >
+          <NavLink to='/Tags' className={({ isActive }) => "side-nav-links" + (isActive ? " active" : "")} style={{ paddingLeft: "40px" }} >
             <p>Tags</p>
           </NavLink>
-          <NavLink to='/Tags' className="side-nav-links" activeClass="active" style={{ paddingLeft: "40px" }} >
+          <NavLink to='/Tags' className={({ isActive }) => "side-nav-links" + (isActive ? " active" : "")} style={{ paddingLeft: "40px" }} >
             <p>Users</p>
           </NavLink>
         </div>
