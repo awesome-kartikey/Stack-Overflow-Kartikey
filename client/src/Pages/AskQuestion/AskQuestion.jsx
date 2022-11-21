@@ -18,7 +18,7 @@ const AskQuestion = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         // console.log({questionTitle, questionBody, questionTags})
-        dispatch(askquestion({questionTitle, questionBody, questionTags, userPosted: User.result.name}, navigate))
+        dispatch(askquestion({questionTitle, questionBody, questionTags, userPosted: User.result.name, userId: User?.result?._id}, navigate))
     }
 
     const handleEnter = (e) => {

@@ -9,7 +9,7 @@ import downvote from '../../Assets/sort-down.svg'
 import './Questions.css'
 import Avatar from '../../components/Avatar/Avatar'
 import DisplayAnswer from './DisplayAnswer'
-import { postAnswer } from '../../actions/question'
+import { postAnswer, deleteQuestion } from '../../actions/question'
 
 const QuestionsDetails = () => {
 
@@ -70,21 +70,21 @@ const QuestionsDetails = () => {
     // }]
 
     const [Answer, setAnswer] = useState('')
-    const navigate = useNavigate()
+    const Navigate = useNavigate()
     const dispatch = useDispatch()
     const User = useSelector( (state) =>  (state.currentUserReducer))
     const handlePostAns = (e, answerLength) => {
         e.preventDeault()
         if(User === null){
             alert('Login or Signup to answer a question')
-            navigate('/Auth')
+            Navigate('/Auth')
         }
         else{
             if(Answer === ''){
                 alert('Enter an answer before submitting')
             }
             else{
-                dispatch(postAnswer({ id, noOfAnswers: answerLength + 1, answerBody: Answer, userAnswered: User.result.name}))
+                dispatch(postAnswer({ id, noOfAnswers: answerLength + 1, answerBody: Answer, userAnswered: User.result.name, userId: User.result._id}))
             }
         }
     }
@@ -97,6 +97,9 @@ const QuestionsDetails = () => {
         alert('Copied To Clipboard :' + url + location.pathname )
     }
 
+    const handleDelete = () => {
+        dispatch(deleteQuestion(id, navigate))
+    }
 
   return (
     <div className='question-details-page'>
@@ -127,7 +130,11 @@ const QuestionsDetails = () => {
                                         <div className="question-actions-user">
                                             <div>
                                                 <button type='button' onClick={handleShare}>Share</button>
-                                                <button type='button'>Delete</button>
+                                                {
+                                                    User?.result?._id === question?.userId && (
+                                                        <button type='button' onClick={handleDelete}>Delete</button>
+                                                    )
+                                                }
                                             </div>
                                             <div>
                                                 <p>asked {moment(question.askedOn).fromNow()}</p>
