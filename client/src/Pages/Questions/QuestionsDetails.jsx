@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
 import {Link, useNavigate, useParams } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import moment from 'moment'
+
 import upvote from '../../Assets/sort-up.svg'
 import downvote from '../../Assets/sort-down.svg'
 import './Questions.css'
 import Avatar from '../../components/Avatar/Avatar'
 import DisplayAnswer from './DisplayAnswer'
-import { useDispatch, useSelector } from 'react-redux'
 import { postAnswer } from '../../actions/question'
 
 const QuestionsDetails = () => {
 
     const {id} = useParams()
     const questionsList = useSelector(state => state.questionReducer)
-    console.log(questionsList)
+    // console.log(questionsList)
     // var questionsList = [{ 
     //     _id: '1',
     //     upVotes: 3,
@@ -81,7 +83,7 @@ const QuestionsDetails = () => {
                 alert('Enter an answer before submitting')
             }
             else{
-                dispatch(postAnswer({ id, noOfAnswers: answerLength + 1, answerBody: Asnwer, userAnswered: User.result.name}))
+                dispatch(postAnswer({ id, noOfAnswers: answerLength + 1, answerBody: Answer, userAnswered: User.result.name}))
             }
         }
     }
@@ -117,7 +119,7 @@ const QuestionsDetails = () => {
                                                 <button type='button'>Delete</button>
                                             </div>
                                             <div>
-                                                <p>asked {question.askedOn}</p>
+                                                <p>asked {moment(question.askedOn).fromNow()}</p>
                                                 <Link to={`/User/${question.userId}`} className='user-link' style={{color:'#0086d8'}}>
                                                     <Avatar backgroundColor="orange" px="8px" py="5px">{question.userPosted.charAt(0).toUpperCase()}</Avatar>
                                                     <div>
