@@ -5,7 +5,7 @@ import QuestionsDetails from './QuestionsDetails'
 import { Link } from 'react-router-dom'
 import Avatar from '../../components/Avatar/Avatar'
 
-const DisplayAnswer = ({question}) => {
+const DisplayAnswer = ({question, handleShare}) => {
   return (
     <div>
         {
@@ -14,7 +14,7 @@ const DisplayAnswer = ({question}) => {
                     <p>{ans.answerBody}</p>
                     <div className="question-actions-user">
                         <div>
-                            <button type='button'>Share</button>
+                            <button type='button' onClick={handleShare}>Share</button>
                             <button type='button'>Delete</button>
                         </div>
                         <div>

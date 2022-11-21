@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import {Link, useNavigate, useParams } from 'react-router-dom'
+import {Link, useNavigate, useParams, useLocation } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import moment from 'moment'
+import CopyToClipboard from 'react-copy-to-clipboard'
 
 import upvote from '../../Assets/sort-up.svg'
 import downvote from '../../Assets/sort-down.svg'
@@ -87,6 +88,16 @@ const QuestionsDetails = () => {
             }
         }
     }
+
+    const location = useLocation()
+    const url = 'http://localhost:3000'
+    const copy = CopyToClipboard()
+    const handleShare = () => {
+        copy(url+location.pathname)
+        alert('Copied To Clipboard :' + url + location.pathname )
+    }
+
+
   return (
     <div className='question-details-page'>
         {
@@ -115,7 +126,7 @@ const QuestionsDetails = () => {
                                         </div>
                                         <div className="question-actions-user">
                                             <div>
-                                                <button type='button'>Share</button>
+                                                <button type='button' onClick={handleShare}>Share</button>
                                                 <button type='button'>Delete</button>
                                             </div>
                                             <div>
@@ -135,7 +146,7 @@ const QuestionsDetails = () => {
                                     question.noOfAnswers !== 0 && (
                                         <section>
                                             <h3>{question.noOfAnswers} Answers</h3>
-                                            <DisplayAnswer key={question._id} question={question}/>
+                                            <DisplayAnswer key={question._id} question={question} handleShare={handleShare}/>
                                         </section>
                                     )
                                 }
