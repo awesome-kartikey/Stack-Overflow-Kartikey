@@ -23,7 +23,7 @@ const leftSidebar = () => {
           <NavLink to='/Tags' className={({ isActive }) => "side-nav-links" + (isActive ? " active" : "")} style={{ paddingLeft: "40px" }} >
             <p>Tags</p>
           </NavLink>
-          <NavLink to='/Tags' className={({ isActive }) => "side-nav-links" + (isActive ? " active" : "")} style={{ paddingLeft: "40px" }} >
+          <NavLink to='/Users' className={({ isActive }) => "side-nav-links" + (isActive ? " active" : "")} style={{ paddingLeft: "40px" }} >
             <p>Users</p>
           </NavLink>
         </div>
