@@ -1,6 +1,6 @@
 .main-nav{
     min-height: 50px;
-    min-width: 100%;
+    width: 100%;
     margin: 0% auto;
     border-top: solid 3px #ef8236;
     box-shadow: 0px 1px 5px #00000033;
@@ -32,7 +32,7 @@
     font-weight: 500;
     text-decoration: none;
     color: rgb(69, 69, 69);
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .nav-btn{
@@ -53,14 +53,14 @@
 
 .navbar form input{
     min-width: 90%;
-    margin: 0%;
+    margin: 0;
     padding: 8px 10px 8px 32px;
     font-size: 13px;
     border: solid 1px #0000003e;
     border-radius: 3px;
 }
 
-.navbar form .search-icon{
+.navbar form .search-icon {
     position: absolute;
     left: 25px;
     top: 8px;

@@ -1,7 +1,7 @@
 .left-sidebar{
     width: 164px;
-    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
-    transition: box-shadow ease-in-out, 0.1s, transform ease-in-out 0.1s;
+    box-shadow: 1px 1px 0 rgba(0,0,0, 0.2);
+    transition: box-shadow ease-in-out 0.1s, transform ease-in-out 0.1s;
     transform: translateZ(0);
     box-sizing: border-box;
     font-size: 13px;
@@ -19,6 +19,7 @@
     padding: 10px 0px;
 
 }
+
 .side-nav-div div{
     padding-left: 10px;
 }
@@ -29,6 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    padding-left: 10px;
     transition: 0.2s;
 }
 

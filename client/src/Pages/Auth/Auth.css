@@ -27,7 +27,7 @@
 .auth-container-2 form{
     width: 100%;
     padding: 20px;
-    background-color: #fff;
+    background-color: white;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -56,8 +56,8 @@
 }
 
 .auth-container-2 form label:nth-child(4) input{
-    width: 5%;
-    margin: 13px 15px;
+    width: 15%;
+    margin: 13px 0px;
 }
 
 .auth-btn{

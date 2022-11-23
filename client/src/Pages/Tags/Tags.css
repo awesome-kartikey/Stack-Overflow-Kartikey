@@ -21,15 +21,15 @@
     border-radius: 2px;
 }
 
-.tag-h4{
+.tag h5{
     display: inline-block;
-    margin: 10px 10px;
+    margin: 10px 0px;
     padding: 5px 5px;
     background-color: #e1ecf4;
     color: #39739d;
 }
 
-.tag-p{
+.tag p{
     font-size: 14px;
     color: #323232;
     line-height: 17px;
