@@ -88,3 +88,12 @@
 .display-tags-time .display-time {
     font-size: 13px;
 }
+
+@media only screen and (max-width: 600px){
+    .main-bar{
+        width: 100%;
+    }
+    .mobile-votes-ans{
+        padding: 2px 5px;
+    }
+}

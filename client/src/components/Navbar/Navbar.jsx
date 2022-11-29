@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import decode from 'jwt-decode'
 
 import logo from '../../assets/logo.png'
+import icon from '../../assets/icon.png'
 import search from '../../assets/search-solid.svg'
 import Avatar from '../../components/Avatar/Avatar'
 import './Navbar.css'
@@ -34,12 +35,15 @@ const Navbar = () => {
     return (
         <nav className='main-nav'>
             <div className='navbar'>
-                <Link to='/' className='nav-item nav-logo'>
+                <Link to='/' className='nav-item nav-logo logo-full'>
                     <img src={logo} alt='logo' />
                 </Link>
-                <Link to='/' className='nav-item nav-btn'>About</Link>
-                <Link to='/' className='nav-item nav-btn'>Products</Link>
-                <Link to='/' className='nav-item nav-btn'>For Teams</Link>
+                <Link to='/' className='nav-item nav-logo logo-mobile'>
+                    <img src={icon} alt='icon' />
+                </Link>
+                <Link to='/' className='nav-item nav-btn mobile'>About</Link>
+                <Link to='/' className='nav-item nav-btn products'>Products</Link>
+                <Link to='/' className='nav-item nav-btn mobile'>For Teams</Link>
                 <form>
                     <input type="text" placeholder='Search...'/>
                     <img src={search} alt="search" width="18" className='search-icon'/>

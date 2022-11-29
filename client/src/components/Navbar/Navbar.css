@@ -77,3 +77,54 @@
 .nav-links:hover{
     background-color: #d3e4eb;
 }
+
+
+@media only screen and (max-width: 600px){
+    .logo-full{
+        display: none;
+    }
+    .logo-mobile{
+        display: block;
+        padding: 0%;
+    }
+    .mobile{
+        display: none;
+    }
+    .products{
+        padding: 0%;
+    }
+
+    .main-nav{
+        justify-content: space-evenly;
+    }
+
+    .navbar{
+        min-width: auto;
+    }
+
+    .navbar form input{
+        min-width: auto;
+        padding: 8px 6px 8px 12px;
+    }
+
+    .navbar form{
+        padding: 0px 6px;
+        position: relative;
+    }
+    
+    .navbar form .search-icon {
+        left: 172px;
+    }
+    .nav-links{
+        padding: 7px 7px;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px){
+
+}
+
+@media only screen and (min-width: 768px) {
+    .logo-mobile{
+        display: none;
+    }
+}
